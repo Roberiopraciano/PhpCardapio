@@ -1,0 +1,293 @@
+/*-------- Tabs --------*/
+.tabs {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+.tabs nav {
+	text-align: left;
+	margin-top:0;
+	padding-top:0;
+	margin-left:45px;
+}
+.tabs nav ul {
+	padding: 0;
+	margin: 0;
+	margin-bottom:-6px;
+	list-style: none;
+	display: inline-block;
+}
+.tabs nav ul li {
+	border: 1px solid transparent;
+	border-bottom: none;
+	margin: 0 0.25em;
+	display: block;
+	float: left;
+	position: relative;
+}
+.tabs nav li.tab-current {
+	border: 1px solid #ededed;
+	box-shadow: inset 0 2px #ededed;
+	border-bottom: none;
+	z-index: 100;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.tabs nav li.tab-current:before,
+.tabs nav li.tab-current:after {
+	content: '';
+	position: absolute;
+	height: 1px;
+	right: 100%;
+	bottom: 0;
+	width: 1000px;
+	background: #ededed;
+}
+.tabs nav li.tab-current:after {
+	right: auto;
+	left: 100%;
+	width: 4000px;
+}
+.tabs nav li.tab-current a{
+	color:#444;
+}
+.tabs nav a {
+	color: #999;
+	display: block;
+	font-size: 13px;
+	text-transform:uppercase;
+	line-height: 3.5;
+	padding: 0 1.25em;
+	font-weight:500;
+	white-space: nowrap;
+	background-color:#fff;
+	-webkit-border-top-left-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-moz-border-radius-topleft: 3px;
+	-moz-border-radius-topright: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	
+}
+.tabs nav a:hover {
+	color: #333;
+}
+.content section:before,
+.content section:after {
+	content: '';
+	display: table;
+}
+.content section:after {
+	clear: both;
+}
+/* Fallback example */
+.no-js .content section {
+	display: block;
+	padding-bottom: 2em;
+	border-bottom: 1px solid #47a3da;
+}
+.content section.content-current {
+	display: block;
+}
+
+/* Icons */
+.tabs nav a:before {
+	display: inline-block;
+	vertical-align: middle;
+	text-transform: none;
+	font-size:20px;
+	font-weight: normal;
+	font-variant: normal;
+	font-family: 'ElegantIcons';
+	color:#78cfcf;
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	margin: -0.25em 0.4em 0 0;
+
+}
+.icon-profile:before {
+	content: "\e009";
+}
+.icon-settings:before {
+	content: "\67";
+}
+.icon-menut-items:before {
+	content: "\68";
+}
+
+/*-------- Content  --------*/
+.content section {
+	padding:30px 30px 45px 30px;
+	display: none;
+	max-width: 1230px;
+	margin: 0 auto;
+	background-color:#fff;
+	border:1px solid #ededed;
+	border-top: none;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft:5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5 px;
+}
+.content section label{
+	color:#777;
+}
+.indent_title_in{
+	position:relative;
+	padding-left:60px;
+	margin-bottom:20px;
+}
+.indent_title_in i{
+	font-size:36px;
+	position:absolute;
+	left:0;
+	color:#ec008c;
+	top:0;
+}
+.indent_title_in p{
+	color:#777;
+	margin:0;
+	padding:0;
+}
+.wrapper_indent{
+	padding-left:60px;
+}
+hr.styled_2{
+	margin-top: 30px;
+	margin-bottom:40px;
+	margin-left:-30px;
+	margin-right:-30px;
+}
+
+/*Menu tab*/
+.menu-item-section{
+	background-color:#f8f8f8;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	clear:both;
+	margin-bottom:15px;
+	padding:0 10px;
+}
+
+.menu-item-section h4{
+	float:left;
+	font-size:13px;
+	font-weight:bold;
+	color:#777;
+}
+.menu-item-section div{
+	float:right;
+	font-size:18px;
+}
+.menu-item-section div a{
+	margin:5px 0 0 5px;
+	display:inline-block;
+}
+.strip_menu_items{
+	margin-bottom:15px;
+}
+.strip_menu_items h3{
+	font-size:16px;
+	text-transform:uppercase;
+	position:relative;
+	top:10px;
+	padding-left:65px;
+}
+.strip_menu_items h3 span{
+	color:#999;
+	display:block;
+	font-size:11px !important;
+}
+
+/*Settings tab*/
+.table.notifications td, .table.edit-options td {
+	vertical-align:middle;
+}
+.table.notifications td label.margin_left, .table.edit-options td label.margin_left{
+	margin-left:15px !important;
+}
+.table.notifications td label, .table.edit-options td label{
+	margin-bottom:0 !important;
+	padding-bottom:0 !important;
+}
+
+/*Main info tab*/
+.upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+.upload-drop-zone {
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: #222;
+  border-color: #222;
+}
+
+/*-------- Media queries --------*/
+@media screen and (max-width: 1200px) {
+	.table.notifications td label.margin_left, 	.table.edit-options td label.margin_left{
+		margin-left:0 !important;
+	}
+}
+@media screen and (max-width: 767px) {
+	.tabs nav {
+	margin-left:25px;
+	}
+	.tabs nav a span {
+		display: none;
+	}
+	.tabs nav a:before {
+		margin-right: 0;
+	}
+	ul.info_booking{
+	padding:30px 0 15px 0;
+	border-right: none;
+	text-align:left;
+	}
+	.booking_buttons{
+		margin-top:0;
+	}
+	.content section {
+	padding:25px;
+	}
+	.profile_pic{
+	float:none;
+	}
+	.indent_title_in{
+	padding-left:0;
+	margin-bottom:20px;
+	}
+	.indent_title_in i{
+		font-size:45px;
+		position:static;
+		margin-bottom:10px;
+	}
+	.wrapper_indent{
+		padding-left:0;
+	}
+	hr.styled_2{
+	margin-top: 25px;
+	margin-bottom:30px;
+	margin-left:-25px;
+	margin-right:-25px;
+	}
+	.table.notifications td label.margin_left, 	.table.edit-options td label.margin_left{
+		margin-left:0 !important;
+	}
+
+}

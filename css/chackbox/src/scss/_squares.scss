@@ -1,0 +1,41 @@
+[class^="#{$checkbox}-square-"] {
+  label {
+    &:before {
+    }
+
+    &:after {
+    }
+  }
+}
+
+.#{$checkbox} {
+  &-square-1 {
+    label {
+      &:after {
+        left: 0.2em;
+        top: 0.2em;
+        background: $red;
+        z-index: 2;
+      }
+    }
+  }
+
+  &-square-2 {
+    label {
+      &:after {
+        left: 0.2em;
+        top: 0.2em;
+        background: $red;
+      }
+    }
+  }
+
+  &-square-3 {
+    label {
+      &:after {
+        background: $red;
+        z-index: 2;
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@use "sass:color";
+@use "../base" as *;
+@use "../clipPath" as clipPath;
+
+.mt-heart {
+  @include wrapper;
+  label {
+    // bound
+    @include label;
+    width: 5em;
+    height: 5em;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    clip-path: clipPath.$heart;
+    -webkit-clip-path: clipPath.$heart;
+    &:before {
+      // background
+      @include before-after;
+      width: 5em;
+      height: 10em;
+      background: linear-gradient(200deg, #cac9d1 0%, #cac9d1 42%, #ff7ea1 55%, #f00846 100%);
+      transition: 0.2s ease;
+    }
+  }
+  input {
+    @include input-checkbox;
+    &:before,
+    &:after {
+      @include before-after;
+    }
+  }
+  input:checked + label {
+    &:before {
+      // background
+      transform: translateY(-50%);
+    }
+  }
+  input:disabled {
+    & + label {
+      // bound
+      cursor: not-allowed !important;
+    }
+  }
+}
+
+.mt-heart-blush {
+  @extend .mt-heart;
+  label {
+    &:before {
+      // background
+      background: linear-gradient(200deg, #cac9d1 0%, #cac9d1 42%, #ffaab7 55%, #ff435f 100%);
+    }
+  }
+}
+
+.mt-heart-indigo {
+  @extend .mt-heart;
+  label {
+    &:before {
+      // background
+      background: linear-gradient(200deg, #cac9d1 0%, #cac9d1 42%, #a4a9ff 55%, #4b54ff 100%);
+    }
+  }
+}
+
+.mt-heart-pink {
+  @extend .mt-heart;
+  label {
+    &:before {
+      // background
+      background: linear-gradient(200deg, #cac9d1 0%, #cac9d1 42%, #ffc1d7 55%, #ff77a6 100%);
+    }
+  }
+}
+
+.mt-heart-golden {
+  @extend .mt-heart;
+  label {
+    &:before {
+      // background
+      background: linear-gradient(200deg, #cac9d1 0%, #cac9d1 42%, rgb(255, 230, 121) 55%, rgb(243, 207, 1) 100%);
+    }
+  }
+}

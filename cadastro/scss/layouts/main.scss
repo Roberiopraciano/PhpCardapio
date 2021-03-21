@@ -1,0 +1,169 @@
+.signup-content {
+    @extend display-flex;
+}
+.signup-img , .signup-form {
+    width: 50%;
+}
+.signup-img {
+    margin-bottom: -7px;
+}
+.register-form {
+    padding: 50px 100px 50px 70px;
+}
+.form-row {
+    @extend display-flex;
+    margin: 0 -15px;
+    .form-group {
+        width: 50%;
+        padding: 0 15px;
+    }
+}
+.form-group {
+    margin-bottom: 23px;
+    position: relative;
+}
+input, select {
+    display: block;
+    width: 100%;
+    border: 1px solid $border-color;
+    padding: 11px 20px;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 13px;
+    &:focus {
+        border: 1px solid $orange-color;
+    }
+}
+label {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    margin-bottom: 2px;
+    display: block;
+}
+
+.form-radio {
+    @extend display-flex;
+    margin-bottom: 18px;
+    input {
+        width: auto;
+        display: inline-block;
+    }
+}
+.radio-label {
+    padding-right: 72px;
+}
+
+.form-radio-item {
+    position: relative;
+    margin-right: 45px;
+    label {
+        font-weight: 500;
+        font-size: 13px;
+        padding-left: 25px;
+        position: relative;
+        z-index: 9;
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.check{
+    display: inline-block;
+    position: absolute;
+    border: 1px solid $border-color;
+    @include border-radius(50%);
+    height: 13px;
+    width: 13px;
+    top: 4px;
+    left: 0px;
+      z-index: 5;
+      transition: border .25s linear;
+      -webkit-transition: border .25s linear;
+    &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 9px;
+        height: 9px;
+        @include border-radius(50%);
+        top: 2px;
+        left: 2px;
+        margin: auto;
+        transition: background 0.25s linear;
+        -webkit-transition: background 0.25s linear;
+    }
+}
+input[type=radio] {
+    position: absolute;
+    visibility: hidden;
+    &:checked ~ .check {
+        border: 1px solid $orange-color;
+    }
+    &:checked ~ .check::before {
+        background: $orange-color;
+    }
+}
+
+.form-select {
+    position: relative;
+}
+select {
+    @include appearance(none);
+    position: relative;
+    background: 0 0;
+    z-index: 10;
+    cursor: pointer;
+}
+.select-icon {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    @extend display-flex;
+    @include justify-content(center);
+    @include align-items(center);
+    i {
+        @extend display-flex;
+        @include justify-content(center);
+        @include align-items(center);
+        width: 40px;
+        height: 20px;
+        font-size: 18px;
+        color: $grey-light;
+    }
+}
+
+.form-submit {
+    text-align: right;
+    padding-top: 27px;
+}
+.submit {
+    width: 140px;
+    height: 40px;
+    display: inline-block;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 13px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+#reset {
+    background: #f8f8f8;
+    color: $grey-light;
+    margin-right: 8px;
+    &:hover {
+        background: $orange-color;
+        color: #fff;
+    }
+}
+#submit {
+    background: $orange-color;
+    color: #fff;
+    &:hover {
+        background-color: darken($orange-color, 10%)
+    }
+}

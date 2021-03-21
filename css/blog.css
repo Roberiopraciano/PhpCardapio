@@ -1,0 +1,249 @@
+.tags a {
+	display:inline-block;
+	margin:5px 14px 10px 0;
+	padding:5px 10px;
+	color:#555;
+	border:2px solid #fff;
+}
+.tags a:hover {
+	background-color:#fff;
+	border:2px solid #fff;
+	color:#555;
+	text-decoration:none;
+}
+#cat_blog ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+	font-size:14px;
+}
+.widget h4{
+	text-transform:uppercase;
+	font-size:16px;
+}
+#cat_blog ul li a{
+	border-bottom:1px solid #ededed;
+	padding:10px 0;
+	display:block;
+	color:#888;
+}
+#cat_blog ul li:last-child a{
+	border-bottom:none;
+	padding-bottom:0;
+}
+#cat_blog ul li a:hover{
+	color:#e04f67;
+}
+ul.recent_post {
+	margin:0;
+	padding:0;
+}
+ul.recent_post li {
+	padding:0 0 8px 0;
+	margin-bottom:15px;
+	border-bottom:1px #e7e7e7 dotted;
+	color:#313131;
+	list-style:none;
+	line-height:18px;
+	padding-bottom:15px;
+	color:#888;
+	font-style:italic;
+}
+ul.recent_post li a{
+	color:#555;
+}
+ul.recent_post li a:hover{
+	color:#111;
+}
+ul.recent_post li div{
+	padding-left:25px;
+	font-style:normal
+}
+ul.recent_post li:last-child{
+	border-bottom:0;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+.post {
+	margin-bottom:20px;
+	-webkit-box-shadow: 0px 3px 0px 0px #f0f2f4; 
+	-moz-box-shadow: 0px 3px 0px 0px #f0f2f4; 
+	box-shadow: 0px 3px 0px 0px #f0f2f4;
+	background-color:#fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding:20px;
+}
+.post h2{
+	font-size:22px;
+}
+.post img {
+}
+.post p {
+	margin-bottom:20px;
+}
+
+.post_info {
+	padding:10px;
+	background-color:#78cfcf;
+	margin-bottom:12px;
+	color:#fff;
+}
+.post_info a{
+	color: #fff;
+}
+.post_info a:hover{
+	text-decoration:underline;
+}
+.post_info span {
+	color:#ff6666;
+}
+.post-left {float:left;}
+.post-left ul {
+	margin-left:0;
+	padding-left:0;
+}
+.post-left ul li {
+	float:left;
+	margin-right:15px;
+	list-style:none;
+}
+.post-left ul li i{
+	margin-right:4px;
+}
+.post-right {float:right;
+}
+#comments {
+	padding:10px 0 0px 0;
+	margin-bottom:15px;	
+}
+#comments ul {
+	padding:0;
+	margin:0;
+	list-style:none;	
+}
+#comments ol {
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+#comments li {
+	padding:0 0 23px 0;
+	list-style:none;
+}
+.avatar {
+	float:left;
+	margin-right:11px;
+	
+}
+.avatar img {
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;	
+}
+.comment_right {display:table;	}
+.comment_info {padding-bottom:7px;}
+.comment_info span {padding:0 10px;}
+#comments ol li ul li {
+	padding:23px 0 0 30px;
+	margin:0;
+}
+ul#cat_nav_blog{
+	list-style:none;
+	margin:0 0 0 0;
+	padding:0;
+	font-weight:500;
+}
+ul#cat_nav_blog li a{
+	background-color:#fff;
+	padding:10px 15px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	display:block;
+	margin-bottom:7px;
+	position:relative;
+	color:#555;
+}
+ul#cat_nav_blog li a:hover{
+	color:#ec008c;
+}
+ul#cat_nav_blog li:last-child a{
+	margin-bottom:0;
+}
+ul#cat_nav_blog li a:before{
+	position:relative;
+	font-style: normal;
+ 	font-weight: normal;
+ 	font-family: 'ElegantIcons';
+    position:absolute;
+	 font-size:20px;
+  	right:10px;
+  	top:5px;
+	content: "\35";
+}
+#custom-search-input-blog{
+    padding: 3px;
+    background-color: #fff;
+}
+
+#custom-search-input-blog input{
+    border: 0;
+	font-size:14px;
+    box-shadow: none;
+}
+
+#custom-search-input-blog button{
+    margin: 2px 0 0 0;
+    box-shadow: none;
+	background:none;
+    border: 0;
+    color: #666666;
+    padding: 0 8px 0 10px;
+    border-left: solid 1px #ddd;
+	outline:none;
+}
+
+#custom-search-input-blog button:hover{
+    border: 0;
+    box-shadow: none;
+    border-left: solid 1px #ccc;
+	color:#ec008c;
+}
+
+#custom-search-input-blog .glyphicon-search{
+    font-size: 23px;
+}
+#sidebar hr{
+	margin:30px 0 20px 0;
+	 border-top: 1px solid #e2e2e2;
+	 border-bottom: 1px solid #fff;
+}
+
+.pager li > a,
+.pager li > span {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+.pager li > a:hover,
+.pager li > a:focus {
+  text-decoration: none;
+  background-color: #eee;
+}
+/* From tablet portrait to mobile */
+@media (max-width: 767px)  {
+.post-left ul {
+	margin-bottom:0;
+	line-height:1.8;
+}
+.post-left ul li {
+	float:none;
+	margin-right:0;
+}
+.pager { margin-bottom:30px;}
+
+}	

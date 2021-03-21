@@ -1,0 +1,84 @@
+@use "sass:color";
+@use "../base" as *;
+@use "../clipPath" as clipPath;
+
+.mt-star {
+  @include wrapper;
+  label {
+    // bound
+    @include label;
+    width: 5em;
+    height: 5em;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    clip-path: clipPath.$star;
+    -webkit-clip-path: clipPath.$star;
+    &:before {
+      // background
+      @include before-after;
+      width: 5em;
+      height: 10em;
+      background: linear-gradient(#cac9d1 0%, #cac9d1 42%, #91e0f8 55%, #1b68cb 100%);
+      transition: 0.2s ease;
+    }
+  }
+  input {
+    @include input-checkbox;
+    &:before,
+    &:after {
+      @include before-after;
+    }
+  }
+  input:checked + label {
+    &:before {
+      // background
+      transform: translateY(-50%);
+    }
+  }
+  input:disabled {
+    & + label {
+      // bound
+      cursor: not-allowed !important;
+    }
+  }
+}
+
+.mt-star-garden {
+  @extend .mt-star;
+  label {
+    &:before {
+      // background
+      background: linear-gradient(#cac9d1 0%, #cac9d1 42%, #7fee7f 55%, #21bf73 100%);
+    }
+  }
+}
+
+.mt-star-tomato {
+  @extend .mt-star;
+  label {
+    &:before {
+      // background
+      background: linear-gradient(#cac9d1 0%, #cac9d1 42%, #f1a27d 55%, #ff6347 100%);
+    }
+  }
+}
+
+.mt-star-pink {
+  @extend .mt-star;
+  label {
+    &:before {
+      // background
+      background: linear-gradient(#cac9d1 0%, #cac9d1 42%, #ffc1d7 55%, #ff77a6 100%);
+    }
+  }
+}
+
+.mt-star-golden {
+  @extend .mt-star;
+  label {
+    &:before {
+      // background
+      background: linear-gradient(#cac9d1 0%, #cac9d1 42%, rgb(255, 237, 136) 55%, rgb(243, 207, 1) 100%);
+    }
+  }
+}

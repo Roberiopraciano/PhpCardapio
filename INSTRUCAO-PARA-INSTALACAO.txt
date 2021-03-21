@@ -1,0 +1,48 @@
+***** UTILIZE O PHP 7.0
+
+Recomendo usar a hostgator como empresa para hospedagem.
+
+1 Extrair os arquivos com WINRAR
+
+2 criar um banco de dados no phpmyadmin
+
+3 importar o banco de dados que se encontra em BANCO-DE-DADOS-SQL
+
+4 enviar a pasta com os arquivos para o servidor
+
+5 alterar dados de conexão com o banco e Configurações de E-mail em _app/Config.inc.php
+
+// CONFIGRAÇÕES DO BANCO ####################
+define('HOST', 'localhost');
+define('USER', 'root');     // Aqui e o usuário do banco
+define('PASS', '');         // Aqui e a senha do usuário
+define('DBSA', 'whatshop'); // Aqui e o nome do banco de dados
+// CONFIGRAÇÕES DO BANCO ####################
+
+// DEFINE SERVIDOR DE E-MAIL PARA RECEBER NOTIFICAÇÃO VIA E-MAIL ################
+define('MAILUSER', ''); // email: exemplo contato@pedido.top
+define('MAILPASS', ''); // Senha do email
+define('MAILPORT', ''); // exemplo: 465
+define('MAILHOST', '');  // exemplo: mail.pedido.top
+
+6 ainda no mesmo arquivo, alterar tambem o link de acesso:
+
+define('HOME', 'http://seusite.com/'); // Aqui e o endereço do seu site - OBSERVAÇÃO: "SEMPRE COM A BARRA NA FRENTE E DENTRO DAS ASPAS SIMPLES" 
+
+PRONTO! Ja PODE ACESSAR SEU SITE!
+
+
+Credenciais para a conta Demo:
+-----------------------------
+LOGIN: alexdasilvalima2110@gmail.com
+SENHA: pedidotop2020
+
+depois que entrar se quiser pode alterar o login e senha.
+
+seussite.com/admin  =  para acessar a area administrativa use as mesmas credenciais acima... dentro do sistema e so alterar.
+
+
+OBSERVAÇÃO: O restante das configurações você pode fazer acessando o arquivo dentro de: _app/textos.config.php - Para alteração de textos do frontend da loja.
+
+
+Obrigado pela Compra*************

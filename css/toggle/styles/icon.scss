@@ -1,0 +1,116 @@
+@use "sass:color";
+@use "../base" as *;
+@use "../clipPath" as clipPath;
+
+.mt-icon-music {
+  @include wrapper;
+  label {
+    // bound
+    @include label;
+    width: 4.5em;
+    height: 4.5em;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    clip-path: clipPath.$music;
+    -webkit-clip-path: clipPath.$music;
+    &:before {
+      // background
+      @include before-after;
+      width: 4.5em;
+      height: 9em;
+      background: linear-gradient(185deg, #cac9d1 0%, #cac9d1 50%, #ff84a5 58%, #ff7cc8 100%);
+      transition: 0.3s ease;
+    }
+  }
+  input {
+    @include input-checkbox;
+    &:before,
+    &:after {
+      @include before-after;
+    }
+    &:before {
+      // slash
+      background: #cac9d1;
+      border: solid 0.25em #f5f5f5;
+      width: 4.5em;
+      height: 0.3em;
+      transform: rotate(40deg) translate(0.875em, 1.825em);
+      transition: 0.1s ease;
+    }
+  }
+  input:checked {
+    &:before {
+      // slash
+      border: solid 0.25em transparent;
+      background: transparent;
+    }
+  }
+  input:checked + label {
+    &:before {
+      // background
+      transform: translateY(-50%);
+    }
+  }
+  input:disabled {
+    &:before {
+      // slash
+      cursor: not-allowed !important;
+    }
+    & + label {
+      // bound
+      cursor: not-allowed !important;
+    }
+  }
+}
+
+.mt-icon-ring {
+  @extend .mt-icon-music;
+  label {
+    // bound
+    clip-path: clipPath.$ring;
+    -webkit-clip-path: clipPath.$ring;
+    &:before {
+      // background
+      background: linear-gradient(200deg, #cac9d1 0%, #cac9d1 44%, #fe346e 55%, #ffbd69 100%);
+    }
+  }
+}
+
+.mt-icon-mic {
+  @extend .mt-icon-music;
+  label {
+    // bound
+    clip-path: clipPath.$mic;
+    -webkit-clip-path: clipPath.$mic;
+    &:before {
+      // background
+      background: linear-gradient(200deg, #cac9d1 0%, #cac9d1 50%, #00a8cc 60%, #27496d 100%);
+    }
+  }
+}
+
+.mt-icon-cam {
+  @extend .mt-icon-music;
+  label {
+    // bound
+    clip-path: clipPath.$cam;
+    -webkit-clip-path: clipPath.$cam;
+    &:before {
+      // background
+      background: linear-gradient(200deg, #cac9d1 0%, #cac9d1 45%, #ffab9c 55%, #c9485b 100%);
+    }
+  }
+}
+
+.mt-icon-pin {
+  @extend .mt-icon-music;
+  label {
+    // bound
+    clip-path: clipPath.$pin;
+    -webkit-clip-path: clipPath.$pin;
+    &:before {
+      // background
+      background: linear-gradient(200deg, #cac9d1 0%, #cac9d1 47%, #ffe2b0 57%, #ff7315 100%);
+    }
+  }
+}

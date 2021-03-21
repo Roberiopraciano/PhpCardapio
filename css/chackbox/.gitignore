@@ -1,0 +1,41 @@
+# Exclude some files from .gitignore
+.*
+!.gitignore
+!.gitmodules
+!.htaccess
+!.gitkeep
+!.editorconfig
+!.env.example
+!.gitattributes
+!.babelrc
+!.eslintignore
+!.eslintrc
+!.sass-lint.yml
+
+# OS
+__*
+*.bak
+*.lnk
+.DS_Store
+Thumbs.db
+.Trash-*
+
+# IDE
+*~
+*.sublime-project
+.idea
+.vscode
+*.swo
+*.swp
+
+# Npm
+node_modules
+package-lock.json
+
+# Yarn
+yarn.lock
+
+# Node
+demoSrc
+favicons
+gulpfile.js
